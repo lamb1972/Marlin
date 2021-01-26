@@ -86,7 +86,7 @@
 #endif
 
 #ifndef MACHINE_SIZE
-  #define MACHINE_SIZE "220x220x250"
+  #define MACHINE_SIZE "230x230x250"
 #endif
 #ifndef CORP_WEBSITE_C
   #define CORP_WEBSITE_C "www.cxsw3d.com"
@@ -2573,7 +2573,9 @@ void HMI_Control() {
   void HMI_Leveling() {
     Popup_Window_Leveling();
     DWIN_UpdateLCD();
+    // original level command
     queue.inject_P(PSTR("G28O\nG29"));
+    // queue.inject_P(PSTR("M140 S60\nM190 S60\nG28\nG29 P1\nG29 P3\nG29 S1\nG29 F10\nG29 A")); //UBL command
   }
 
 #endif
