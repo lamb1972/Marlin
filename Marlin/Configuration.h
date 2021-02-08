@@ -752,7 +752,7 @@
  */
 
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 88 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 88.08 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -836,7 +836,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-// #define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -998,7 +998,8 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -42, -10, -2 }
+//#define NOZZLE_TO_PROBE_OFFSET { -42, -10, -2.4 } // PETG -2.40
+#define NOZZLE_TO_PROBE_OFFSET { -42, -10, -2.58 }  //PLA -2.5
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
